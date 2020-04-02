@@ -9,7 +9,8 @@ export class Login extends Component {
              users:{},
              text:"",
              isLogged:false,
-             isLoggedOff:false
+             isLoggedOff:true,
+             isupdated:true
 
         }
     }
@@ -21,7 +22,7 @@ export class Login extends Component {
     
     handlerSubmit=(e)=>{
 e.preventDefault()
-axios.get("https://jsonplaceholder.typicode.com/users")
+axios.get("https://cors-anywhere.herokuapp.com/https://jsonplaceholder.typicode.com/users")
 .then(resp=>{
    
     const users=resp.data.filter(usr=>{
@@ -31,11 +32,14 @@ axios.get("https://jsonplaceholder.typicode.com/users")
     if(users){
         this.setState({users:users,
             isLogged:!this.state.isLogged
+            // isLoggedoff:!this.state.isLoggedoff
             })
     }
     else{
         this.setState({
-            isLoggedoff:!this.state.isLoggedoff})
+            isLoggedoff:!this.state.isLoggedoff,
+            isupdated:!this.state.isupdated
+        })
     }
     
 })
@@ -49,18 +53,20 @@ axios.get("https://jsonplaceholder.typicode.com/users")
     
     render() {
 
+        console.log(this.state)
         if(this.state.isLogged){
            this.props.history.push(`/${this.state.users.id}`)
         //return   <Redirect to={`/${this.state.users.id}`} ></Redirect> we can use any of above approach
          }
         
         return (
+            
             <div>
                 <form onSubmit={this.handlerSubmit}>
                     <div className='login'>
                     <h1>LOGIN</h1>
                     <input type="text" name="text"  onBlur={this.handleOnBlur}/>
-                    <h4>{this.state.isLoggedOff && 'Failed Login'}</h4>                    
+                    <h4>{this.state.isupdated ?'': 'Failed Login'}</h4>                    
                     <input type="submit"/>
                     </div>
                     
