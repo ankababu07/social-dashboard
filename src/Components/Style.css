@@ -1,0 +1,93 @@
+.login{
+    margin-left: 20%;
+    margin-top: 10%;
+    width:50%;
+    height:300px;
+    text-align: left;
+    border:2px solid black;
+    border-style: double;
+    border-width: 5px;
+}
+.logindetails{
+    text-align: center;
+}
+.postheader{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0; 
+  background: deepskyblue;
+  margin-bottom: 20px;
+}
+.postheader h4{
+    text-decoration: none;
+    text-align: left;
+  display: block;
+  padding-left: 30px;
+  color: white;
+}
+.postheader h3{
+    text-decoration: none;
+  display: block;
+  padding-left: 85%;
+  color: deepskyblue;
+}
+
+.usedetails{
+    display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin-left: 10%;
+    width:75%;
+    border:2px solid black;
+    margin-bottom: 20px;
+    background-color:#E0E0E0;;
+}
+
+.usedetails ul{
+    text-align: start;
+    font-size: 12px;
+    list-style: none;
+    
+}
+.usedetails ul {
+    display: inline-block;
+}
+
+#usedetails2{
+    padding-left: 60%;
+}
+
+
+.postinfo{
+    margin-left: 10%;
+    width:75%;
+    text-align: left;
+    border:2px solid black;
+    margin-bottom: 20px;
+}
+
+.postbody{
+    margin-left: 10%;
+    width:75%;
+    border:2px solid black;
+    margin-bottom: 20px;
+    background-color: gray;
+}
+.postbody1{
+    margin-left: 10%;
+    width:80%;
+    border:2px solid black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color:#E0E0E0;
+    text-overflow: ellipsis; 
+
+}
+.postbody1 ul{
+    text-align: start;
+    font-size: 12px;
+    list-style: none;
+}
